@@ -1,0 +1,84 @@
+:root{
+    --backgroundColor : gray;
+    --answerColor : white;
+    --fontSize : 1rem;
+}
+body{
+    background-color: var(--backgroundColor);
+}
+main{
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ball{
+    margin: 2em;
+    cursor: pointer;
+}
+.blackBall , .whiteBall{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blackBall{
+    height: 200px;
+    width: 200px;
+    background:radial-gradient(farthest-corner at 60px 45px, #aaa 0%, black 50%);  
+}
+.whiteBall{
+    height: 120px;
+    width: 120px;
+    background:radial-gradient(farthest-corner at 130px 130px, black 0%, #f5f5f5 50%);
+}
+.ballNR{
+    font-weight: 700;
+    font-size: 3em;
+}
+.answerButton{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.521), 0 3px 6px rgba(0, 0, 0, 0.61);
+    cursor: pointer;
+}
+
+.triangle{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a0/Blue_triangle.svg) ;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    color: var(--answerColor) ;
+    font-size: var(--fontSize);
+}
+.shake{
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+  }
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
